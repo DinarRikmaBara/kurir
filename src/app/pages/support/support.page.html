@@ -1,0 +1,32 @@
+<ion-header [translucent]="true"> 
+  <ion-toolbar > 
+    <ion-icon name="arrow-back" routerLink="/set-seller"></ion-icon>
+   <p class="kalimat">Help&Support</p>
+  </ion-toolbar> 
+</ion-header> 
+
+<ion-content [fullscreen]="true">
+  <div class="support-logo">
+    <img src="assets/image/Logo.png" alt="">
+  </div>
+
+  <div class="support-form">
+    <form >
+      <ion-textarea
+        placeholder="Enter your support message below"
+        labelPlacement="stacked"
+        fill="solid"
+        [(ngModel)]="form" [ngModelOptions]="{standalone: true}"
+        name="supportQuestion"
+        #supportQuestion="ngModel"
+        rows="6"
+        errorText="Support message is required"
+        required>
+      </ion-textarea>
+
+      <div class="ion-padding">
+        <ion-button expand="block" (click)="feedback()">Send</ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>
